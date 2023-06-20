@@ -19,6 +19,27 @@
     }
 }
 
+/***** Animation du coeur *****/
+.fa-heart-animated {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    font-size: 0px;
+    color: #9356DC;
+    transition-duration: 0.3s;
+}
+  
+/***** Animation du bouton *****/
+@keyframes flash {
+    0% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
 /* Small devices (phones, less than 770px) */
 @media (max-width: 770px) and (min-width: 100px) {
 
@@ -108,10 +129,7 @@
         font-size: 20px;
     }
 
-    .fa-heart:active {
-        background: linear-gradient(193deg, rgb(255, 121, 218) -11%, rgb(147, 86, 220) 124%);
-    }
-
+    
     /***** Header *****/
     header {
         display: flex;
@@ -294,8 +312,19 @@
         margin: 16px 25px 12px 13px;
     }
 
-    .restaurant .restaurant-card .card .card-content .heart {
+    .restaurant .restaurant-card .card .card-content .card__heart {
         margin-top: 10px;
+        position: relative;
+    }
+
+    #heart-icon {
+        position: relative;
+        height: 19px;
+        cursor: pointer;
+    }
+      
+    #heart-icon:hover .fa-heart-animated {
+        font-size: 20px;
     }
 
     /***** Footer *****/
