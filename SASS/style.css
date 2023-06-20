@@ -1,0 +1,325 @@
+@charset "UTF-8";
+/***** Animation des cards *****/
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/***** Animation des cards *****/
+.anim-1 {
+  animation-delay: 0.1s;
+}
+.anim-2 {
+  animation-delay: 0.2s;
+}
+.anim-3 {
+  animation-delay: 0.3s;
+}
+.anim-4 {
+  animation-delay: 0.4s;
+}
+.anim-5 {
+  animation-delay: 0.5s;
+}
+.anim-6 {
+  animation-delay: 0.6s;
+}
+.anim-7 {
+  animation-delay: 0.7s;
+}
+.anim-8 {
+  animation-delay: 0.8s;
+}
+.anim-9 {
+  animation-delay: 0.9s;
+}
+.anim-10 {
+  animation-delay: 1s;
+}
+
+/***** Animation du coeur *****/
+.fa-heart-animated {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  font-size: 0px;
+  color: #9356DC;
+  transition-duration: 0.3s;
+}
+
+/***** Animation du bouton *****/
+@keyframes flash {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/***** Animation de la checkbox *****/
+@keyframes checked {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60px;
+  }
+}
+@keyframes content {
+  0% {
+    padding: 0;
+  }
+  100% {
+    padding-right: 70px;
+  }
+}
+/* Small devices (phones, less than 770px) */
+@media (max-width: 770px) and (min-width: 100px) {
+  /***** General *****/
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .main-container {
+    width: 100%;
+    max-width: 770px;
+    box-sizing: border-box;
+  }
+  .card-title {
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+  .card-subtitle {
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+  }
+  .card img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .fa-heart:active {
+    background: linear-gradient(193deg, #FF79DA -11%, #9356DC 124%);
+  }
+  /***** Header *****/
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 63px;
+  }
+  header .back {
+    font-size: 19px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+  }
+  header .back a {
+    color: black;
+  }
+  header p {
+    font-family: "Shrikhand", cursive;
+    font-weight: 400;
+    font-size: 30px;
+  }
+  /***** Bannière *****/
+  .banniere img {
+    width: 100%;
+    height: 275px;
+  }
+  /***** Menu *****/
+  .menu {
+    background-color: #F6F6F6;
+    padding-top: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 40px;
+    margin-top: -60px;
+    box-sizing: border-box;
+    border-radius: 40px 40px 0px 0px;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+  }
+  .menu h1 {
+    font-family: "Shrikhand", cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    margin: 0;
+  }
+  .menu h2 {
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+  .menu button {
+    display: flex;
+    background: linear-gradient(193deg, #FF79DA -11%, #9356DC 124%);
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));
+    color: white;
+    border-radius: 25px 25px 25px 25px;
+    border: 1px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 48px;
+    padding-right: 48px;
+    height: 50px;
+  }
+  .menu button:hover {
+    cursor: pointer;
+    animation: flash 1s;
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));
+  }
+  .menu-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+  }
+  .menu-title__heart {
+    position: relative;
+    height: 21px;
+  }
+  #heart-icon {
+    position: relative;
+    height: 19px;
+    cursor: pointer;
+  }
+  #heart-icon:hover .fa-heart-animated {
+    font-size: 20px;
+  }
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  .menu-list .underline {
+    height: 3px;
+    display: inline-block;
+    width: 40px;
+    background-color: #99E2D0;
+  }
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .menu-card .card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    border-radius: 20px;
+    height: 70px;
+    background-color: white;
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.1));
+    position: relative;
+    animation-name: appear;
+    animation-duration: 1s;
+    transform: scale(0);
+    animation-fill-mode: both;
+  }
+  .menu-card .card .card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .menu-card .card .card-content:hover .card-check {
+    animation-name: checked;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  .menu-card .card .card-content:hover .price {
+    animation-name: checked;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+  }
+  .menu-card .card .card-content .card-txt {
+    padding: 0px 0px 25px 20px;
+  }
+  .menu-card .card .card-content .price {
+    font-weight: 700;
+    font-size: 15px;
+    margin-top: 18px;
+    position: absolute;
+    right: 20px;
+  }
+  .menu-card .card .card-content .card-check {
+    display: flex;
+    background-color: #99E2D0;
+    width: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-left: -140px;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu-card .card .card-content .card-check .fa-check-circle {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  /***** Footer *****/
+  footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    color: white;
+    width: 100%;
+    background: #353535;
+    box-sizing: border-box;
+  }
+  footer h3, footer p {
+    margin: 0;
+  }
+  footer .logo p {
+    font-family: "Shrikhand", cursive;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 22px;
+    order: 0;
+  }
+  footer .link {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    order: 1;
+  }
+  footer .link .contact {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 16px;
+    gap: 7px;
+  }
+  footer .link .link1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    gap: 12px;
+  }
+  footer .link .link1 .icon {
+    width: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
