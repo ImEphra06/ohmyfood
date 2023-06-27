@@ -1,12 +1,12 @@
 /***** Animation du loader *****/
 @keyframes load {
-    from {
-      opacity: 90%;
+    0% {
+        z-index: 1;
+        opacity: 1;
     }
-    to {
-      opacity: 0%;
-      display: none;
-      z-index: -1;
+    100% {
+        z-index: 1;
+        opacity: 1;
     }
 }
 
@@ -15,7 +15,7 @@
         transform: rotate(0deg);
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(720deg);
     }
 }
 
@@ -28,16 +28,6 @@
     font-size: 0px;
     color: #9356DC;
     transition-duration: 0.3s;
-}
-  
-/***** Animation du bouton *****/
-@keyframes flash {
-    0% {
-      opacity: 0.2;
-    }
-    100% {
-      opacity: 1;
-    }
 }
 
 /* Small devices (phones, less than 770px) */
@@ -67,9 +57,9 @@
         position: fixed;
         z-index: 1;
         animation-name: load;
-        animation-duration: 6s;
-        animation-fill-mode: both;
+        animation-duration: 2s;
         animation-delay: 1s;
+		opacity: 0;
     }
     
     .bloc .bloc-loader {
@@ -83,8 +73,8 @@
         margin-right: auto;
         border-top-color: #9356DC;
         animation-name: rotation;
-        animation-duration: 1s ;
-        transition: opacity 2s ease-in-out;
+        animation-duration: 2s ;
+        animation-delay: 1s;
     }
 
     .card-title {
@@ -186,7 +176,7 @@
     .center button {
         display: flex;
         background: linear-gradient(193deg, rgb(255, 121, 218) -11%, rgb(147, 86, 220) 124%);
-        filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));
+        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
         color: white;
         border-radius: 25px 25px 25px 25px;
         border: 1px;
@@ -197,6 +187,12 @@
         padding-left: 48px;
         padding-right: 48px;
         height: 50px;
+    }
+
+    .center button:hover {
+        display: flex;
+        background: linear-gradient(193deg, rgb(255, 121, 218) -11%, rgb(147, 86, 220) 124%);
+        opacity: 0.5;
     }
 
     /***** Fonctionnement *****/
