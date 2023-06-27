@@ -30,95 +30,359 @@
     transition-duration: 0.3s;
 }
 
+
+/***** Général *****/
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+}
+
+.bloc {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    animation-name: load;
+    animation-duration: 2s;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+.bloc .bloc-loader {
+    border: solid 15px rgba(211, 211, 211, 0.925);
+    border-radius: 50%;
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    margin-top: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    border-top-color: #9356DC;
+    animation-name: rotation;
+    animation-duration: 2s ;
+    animation-delay: 1s;
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+  
+.card-subtitle {
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+}
+
+.number h3 {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.fun h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.fa-mobile-screen-button, .fa-list-ul {
+    color: #7E7E7E;
+}
+
+.fa-store {
+    color: #9356DC;
+}
+
+.fa-heart {
+    font-size: 20px;
+}
+
+/***** Header *****/
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 96px;
+    /*filter: drop-shadow(0px 3px 10px rgba(0, 0, 0, 0.5));*/
+}
+
+header p {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+/***** Localisation *****/
+.localisation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 50px;
+    background-color: #EAEAEA;
+    box-sizing: border-box;
+}
+
+.localisation h3 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+/***** Texte + bouton *****/
+.center {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+}
+
+.center h1 {
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    margin: 40px 50px 18px 50px;
+}
+
+.center p {
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    margin: 0px 30px 27px 30px;
+}
+
+.center button {
+    display: flex;
+    background: linear-gradient(193deg, rgb(255, 121, 218) -11%, rgb(147, 86, 220) 124%);
+    filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
+    color: white;
+    border-radius: 25px 25px 25px 25px;
+    border: 1px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 57px;
+    padding-left: 48px;
+    padding-right: 48px;
+    height: 50px;
+}
+
+.center button:hover {
+    display: flex;
+    background: linear-gradient(193deg, rgb(255, 121, 218) -11%, rgb(147, 86, 220) 124%);
+    opacity: 0.5;
+}
+
+/***** Fonctionnement *****/
+.function {
+    display: flex;
+    flex-direction: column;
+    margin: 48px 180px 68px 180px;
+    box-sizing: border-box;
+}
+
+.function h1 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.function .function-item {
+    display: flex;
+    flex-direction: row;
+    margin-top: 26px;
+    margin-left: 12px;
+    gap: 25px;
+}
+
+.function .item {
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    filter: drop-shadow(2px 7px 5px rgba(0, 0, 0, 0.1));
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 72px;
+    width: 34%;
+    gap: 18px;
+}
+
+.function .item .number {
+    display: flex;
+    background-color: #9356DC;
+    color: white;
+    border-radius: 50px 50px 50px 50px;
+    padding: 1px 6px 1px 6px;
+    margin-left: -11px;
+    font-weight: 300;
+}
+
+.function .item .fun {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+/***** Restaurant *****/
+.restaurant {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    padding-left: 180px;
+    padding-right: 180px;
+    box-sizing: border-box;
+}
+
+.restaurant h1 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 55px;
+}
+
+.restaurant .restaurant-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px 0px 30px 0px;
+    gap: 70px;
+}
+
+.restaurant .restaurant-card .card {
+    background-color: white;
+    position: relative;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 500px;
+}
+
+.restaurant .restaurant-card .card .new {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background-color: #99E2D0;
+    color: #008766;
+    width: 80px;
+    height: 29px;
+    border-radius: 2px;
+    top: 15px;
+    right: 15px;
+}
+
+.restaurant .restaurant-card .card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.restaurant .restaurant-card .card .card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin: 16px 25px 12px 13px;
+}
+
+.restaurant .restaurant-card .card .card-content .card__heart {
+    margin-top: 10px;
+    position: relative;
+}
+
+#heart-icon {
+    position: relative;
+    height: 19px;
+    cursor: pointer;
+}
+  
+#heart-icon:hover .fa-heart-animated {
+    font-size: 20px;
+}
+
+/***** Footer *****/
+footer {
+    display: flex;
+    flex-direction: row;
+    padding-left: 25px;
+    padding-top: 65px;
+    padding-bottom: 20px;
+    color: white;
+    width: 100%;
+    gap: 70px;
+    background: #353535;
+    box-sizing: border-box;
+    justify-content: flex-end;
+}
+
+footer .logo p {
+    font-family: 'Shrikhand', cursive;
+    font-weight: 400;
+    font-size: 18px;
+    margin-right: 60px;
+}
+
+footer .link {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+}
+
+footer .link .link1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 500;
+    font-size: 16px;
+    gap: 12px;
+}
+
+footer .link .link1 .icon {
+    width: 20px;
+}
+
+footer .link .contact {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    gap: 7px;
+}
+
+
+
 /* Small devices (phones, less than 770px) */
 @media (max-width: 770px) and (min-width: 100px) {
 
-    /***** General *****/
-    * {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    body {
-        display: flex;
-        justify-content: center;
-        margin: 0;
-    }
-
     .main-container {
-        width: 100%;
         max-width: 770px;
-        box-sizing: border-box;
     }
 
-    .bloc {
-        background-color: white;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        z-index: 1;
-        animation-name: load;
-        animation-duration: 2s;
-        animation-delay: 1s;
-		opacity: 0;
-    }
-    
     .bloc .bloc-loader {
-        border: solid 15px rgba(211, 211, 211, 0.925);
-        border-radius: 50%;
-        z-index: 1;
-        width: 100px;
-        height: 100px;
         margin-top: 70%;
-        margin-left: auto;
-        margin-right: auto;
-        border-top-color: #9356DC;
-        animation-name: rotation;
-        animation-duration: 2s ;
-        animation-delay: 1s;
     }
-
-    .card-title {
-        font-weight: 700;
-        font-size: 18px;
-    }
-      
-    .card-subtitle {
-        font-weight: 300;
-        font-size: 15px;
-        margin: 0;
-    }
-
-    .number h3 {
-        font-weight: 500;
-        font-size: 15px;
-    }
-
-    .fun h3 {
-        font-weight: 500;
-        font-size: 16px;
-    }
-
-    h1, h2, h3, p {
-        margin: 0;
-    }
-
-    a {
-        text-decoration: none;
-        color: black;
-    }
-
-    .fa-mobile-screen-button, .fa-list-ul {
-        color: #7E7E7E;
-    }
-
-    .fa-store {
-        color: #9356DC;
-    }
-
-    .fa-heart {
-        font-size: 20px;
-    }
-
     
     /***** Header *****/
     header {
@@ -135,30 +399,7 @@
         font-size: 30px;
     }
 
-    /***** Localisation *****/
-    .localisation {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 15px;
-        height: 50px;
-        background-color: #EAEAEA;
-        box-sizing: border-box;
-    }
-
-    .localisation h3 {
-        font-weight: 500;
-        font-size: 16px;
-    }
-
     /***** Texte + bouton *****/
-    .center {
-        display: flex;
-        flex-direction: column;
-        background-color: #F6F6F6;
-    }
-
     .center h1 {
         font-weight: 700;
         font-size: 24px;
@@ -173,75 +414,17 @@
         margin: 0px 30px 27px 30px;
     }
 
-    .center button {
-        display: flex;
-        background: linear-gradient(193deg, rgb(255, 121, 218) -11%, rgb(147, 86, 220) 124%);
-        filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.2));
-        color: white;
-        border-radius: 25px 25px 25px 25px;
-        border: 1px;
-        align-items: center;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 57px;
-        padding-left: 48px;
-        padding-right: 48px;
-        height: 50px;
-    }
-
-    .center button:hover {
-        display: flex;
-        background: linear-gradient(193deg, rgb(255, 121, 218) -11%, rgb(147, 86, 220) 124%);
-        opacity: 0.5;
-    }
-
     /***** Fonctionnement *****/
     .function {
-        display: flex;
-        flex-direction: column;
         margin: 48px 20px 68px 20px;
-        box-sizing: border-box;
-    }
-
-    .function h1 {
-        font-weight: 700;
-        font-size: 24px;
     }
 
     .function .function-item {
-        display: flex;
         flex-direction: column;
-        margin-top: 26px;
-        margin-left: 12px;
-        gap: 25px;
     }
 
     .function .item {
-        background-color: #F6F6F6;
-        border-radius: 20px;
-        filter: drop-shadow(2px 7px 5px rgba(0, 0, 0, 0.1));
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        height: 72px;
-        gap: 18px;
-    }
-
-    .function .item .number {
-        display: flex;
-        background-color: #9356DC;
-        color: white;
-        border-radius: 50px 50px 50px 50px;
-        padding: 1px 6px 1px 6px;
-        margin-left: -11px;
-        font-weight: 300;
-    }
-
-    .function .item .fun {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
+        width: 100%;
     }
 
     /***** Restaurant *****/
@@ -252,12 +435,6 @@
         padding-left: 15px;
         padding-right: 15px;
         box-sizing: border-box;
-    }
-
-    .restaurant h1 {
-        font-weight: 700;
-        font-size: 24px;
-        margin-top: 55px;
     }
 
     .restaurant .restaurant-card {
@@ -279,63 +456,14 @@
         width: 100%;
     }
 
-    .restaurant .restaurant-card .card .new {
-        display: flex;
-        position: absolute;
-        justify-content: center;
-        align-items: center;
-        background-color: #99E2D0;
-        color: #008766;
-        width: 80px;
-        height: 29px;
-        border-radius: 2px;
-        top: 15px;
-        right: 15px;
-    }
-
-    .restaurant .restaurant-card .card img {
-        width: 100%;
-        height: 190px;
-        object-fit: cover;
-        border-radius: 20px 20px 0px 0px;
-    }
-
-    .restaurant .restaurant-card .card .card-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        box-sizing: border-box;
-        margin: 16px 25px 12px 13px;
-    }
-
-    .restaurant .restaurant-card .card .card-content .card__heart {
-        margin-top: 10px;
-        position: relative;
-    }
-
-    #heart-icon {
-        position: relative;
-        height: 19px;
-        cursor: pointer;
-    }
-      
-    #heart-icon:hover .fa-heart-animated {
-        font-size: 20px;
-    }
-
     /***** Footer *****/
     footer {
         display: flex;
         flex-direction: column;
-        padding-left: 25px;
         padding-top: 22px;
-        padding-bottom: 22px;
-        color: white;
-        width: 100%;
-        background: #353535;
-        box-sizing: border-box;
+        gap: 0px;
     }
-
+    
     footer .logo p {
         font-family: 'Shrikhand', cursive;
         font-weight: 400;
@@ -347,17 +475,7 @@
     footer .link {
         display: flex;
         flex-direction: column;
-        gap: 7px;
         order: 1;
-    }
-
-    footer .link .link1 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        font-weight: 500;
-        font-size: 16px;
-        gap: 12px;
     }
 
     footer .link .link1 .icon {
@@ -367,8 +485,7 @@
     footer .link .contact {
         display: flex;
         flex-direction: column;
-        font-weight: 400;
-        font-size: 16px;
-        gap: 7px;
+        align-items: flex-start;
+        padding-left: 0px;
     }
 }
