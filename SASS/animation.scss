@@ -61,32 +61,3 @@
   color: #9356DC;
   transition-duration: 0.3s;
 }
-  
-/***** Animation du bouton *****/
-@keyframes flash {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/***** Animation de la checkbox *****/
-@keyframes checked {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 60px;
-  }
-}
-
-@keyframes content {
-  0% {
-    padding: 0;
-  }
-  100% {
-    padding-right: 70px;
-  }
-}

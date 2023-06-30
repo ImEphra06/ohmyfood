@@ -51,32 +51,6 @@
   transition-duration: 0.3s;
 }
 
-/***** Animation du bouton *****/
-@keyframes flash {
-  0% {
-    opacity: 0.2;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-/***** Animation de la checkbox *****/
-@keyframes checked {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 60px;
-  }
-}
-@keyframes content {
-  0% {
-    padding: 0;
-  }
-  100% {
-    padding-right: 70px;
-  }
-}
 /* Large devices (laptop, more than 770px) */
 /***** General *****/
 * {
@@ -123,12 +97,13 @@ header {
   align-items: center;
   justify-content: center;
   height: 96px;
+  position: relative;
 }
 header .back {
-  font-size: 19px;
+  font-size: 25px;
   position: absolute;
   left: 20px;
-  top: 20px;
+  top: 34px;
 }
 header .back a {
   color: black;
@@ -145,6 +120,15 @@ header p {
   height: 400px;
 }
 
+/***** Main *****/
+main {
+  display: flex;
+  max-width: 1055px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
 /***** Menu *****/
 .menu {
   background-color: #F6F6F6;
@@ -153,8 +137,6 @@ header p {
   padding-right: 210px;
   padding-bottom: 40px;
   margin-top: -50px;
-  margin-left: 192px;
-  margin-right: 0px;
   border-radius: 40px 40px 0px 0px;
   width: 100%;
   box-sizing: border-box;
@@ -188,9 +170,9 @@ header p {
   height: 50px;
 }
 .menu button:hover {
-  cursor: pointer;
-  animation: flash 1s;
-  filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.2));
+  display: flex;
+  background: linear-gradient(193deg, rgb(255, 121, 218) -11%, rgb(147, 86, 220) 124%);
+  opacity: 0.5;
 }
 
 .menu-title {
@@ -251,44 +233,40 @@ header p {
 .menu-card .card .card-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  box-sizing: border-box;
   overflow: hidden;
 }
 .menu-card .card .card-content:hover .card-check {
-  animation-name: checked;
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-.menu-card .card .card-content:hover .price {
-  animation-name: checked;
-  animation-duration: 1s;
-  animation-fill-mode: both;
+  width: 60px;
 }
 .menu-card .card .card-content .card-txt {
-  padding: 0px 0px 25px 20px;
+  padding: 0px 0px 25px 15px;
+  width: 100%;
 }
 .menu-card .card .card-content .price {
+  display: flex;
   font-weight: 700;
   font-size: 15px;
   margin-top: 18px;
-  position: absolute;
-  right: 20px;
+  padding-right: 13px;
+  white-space: nowrap;
 }
 .menu-card .card .card-content .card-check {
   display: flex;
   background-color: #99E2D0;
+  color: white;
+  height: 100%;
   width: 0px;
+  transition: width 1s;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  margin-left: -140px;
   justify-content: center;
   align-items: center;
 }
 .menu-card .card .card-content .card-check .fa-check-circle {
-  color: white;
   font-weight: 600;
   font-size: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /***** Footer *****/
@@ -337,6 +315,14 @@ footer .link .link1 .icon {
   width: 20px;
 }
 
+/* Medium devices (tablet, between 770px and 1040px) */
+@media (max-width: 1040px) and (min-width: 771px) {
+  /***** Menu *****/
+  .menu {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 /* Small devices (phones, less than 770px) */
 @media (max-width: 770px) and (min-width: 100px) {
   .main-container {
@@ -345,6 +331,12 @@ footer .link .link1 .icon {
   /***** Header *****/
   header {
     height: 63px;
+  }
+  header .back {
+    font-size: 19px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
   }
   /***** Bannière *****/
   .banniere img {
