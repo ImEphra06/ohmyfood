@@ -376,7 +376,7 @@ footer .link .contact {
 
 
 /* Medium devices (tablet, between 770px and 1040px) */
-@media (max-width: 1040px) and (min-width: 771px) {
+@media (max-width: 1060px) and (min-width: 771px) {
     /***** Fonctionnement *****/
     .function {
         margin-right: 20px;
