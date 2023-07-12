@@ -215,6 +215,8 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
 }
 .menu-card .card {
   display: flex;
@@ -229,25 +231,50 @@ main {
   animation-duration: 1s;
   transform: scale(0);
   animation-fill-mode: both;
+  width: 100%;
+  max-width: 100%;
 }
 .menu-card .card .card-content {
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 }
 .menu-card .card .card-content:hover .card-check {
   width: 60px;
 }
-.menu-card .card .card-content .card-txt {
+.menu-card .card .card-content .card-info {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  overflow: hidden;
+  max-width: 100%;
+}
+.menu-card .card .card-content .card-info .card-txt {
   padding: 0px 0px 25px 15px;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
-.menu-card .card .card-content .price {
+.menu-card .card .card-content .card-info .card-txt .card-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 100%;
+}
+.menu-card .card .card-content .card-info .card-txt .card-subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  max-width: 100%;
+}
+.menu-card .card .card-content .card-info .price {
   display: flex;
   font-weight: 700;
-  font-size: 15px;
-  margin-top: 18px;
-  padding-right: 13px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0px 8px 13px 0px;
   white-space: nowrap;
 }
 .menu-card .card .card-content .card-check {
@@ -316,7 +343,7 @@ footer .link .link1 .icon {
 }
 
 /* Medium devices (tablet, between 770px and 1040px) */
-@media (max-width: 1040px) and (min-width: 771px) {
+@media (max-width: 1060px) and (min-width: 771px) {
   /***** Menu *****/
   .menu {
     padding-left: 20px;

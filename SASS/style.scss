@@ -175,6 +175,8 @@ main {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 100%;
 
   .card {
     display: flex;
@@ -189,30 +191,59 @@ main {
     animation-duration: 1s;
     transform: scale(0);
     animation-fill-mode: both;
+    width: 100%;
+    max-width: 100%;
 
     .card-content {
       display: flex;
       flex-direction: row;
       overflow: hidden;
+      width: 100%;
+      max-width: 100%;
 
       &:hover .card-check {
         width: 60px;
       }
-
-      .card-txt {
-        padding: 0px 0px 25px 15px;
-        width: 100%;
-      }
-
-      .price {
+      
+      .card-info {
         display: flex;
-        font-weight: 700;
-        font-size: 15px;
-        margin-top: 18px;
-        padding-right: 13px;
-        white-space: nowrap;
-      }
+        flex: 1;
+        justify-content: space-between;
+        overflow: hidden;
+        max-width: 100%;
 
+
+        .card-txt {
+          padding: 0px 0px 25px 15px;
+          width: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+
+          .card-title {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            max-width: 100%;
+          }
+
+          .card-subtitle {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+
+        .price {
+          display: flex;
+          font-weight: 700;
+          justify-content: flex-end;
+          align-items: flex-end;
+          margin: 0px 8px 13px 0px;
+          white-space: nowrap;
+        }
+      }
+      
       .card-check {
         display: flex;
         background-color: $check;

@@ -318,16 +318,27 @@ header p {
     position: relative;
 }
 
-.restaurant .restaurant-card .card .card-content .card__heart img {
-    width: 24px;
-    position: absolute;
-    right: 1px;
-    opacity: 0.5;
+.restaurant .restaurant-card .card .card-content .heart {
+	position: absolute;
+	right: 10px;
+	width: 22px;
+	transition: opacity 0.5s;
 }
 
-.restaurant .restaurant-card .card .card-content .card__heart img:hover {
-    opacity: 0;
-    transition: 500ms;
+.restaurant .restaurant-card .card .card-content .card__heart .heart_empty {
+	opacity: 1;
+}
+
+.restaurant .restaurant-card .card .card-content .card__heart:hover .heart_empty {
+	opacity: 0;
+}
+
+.restaurant .restaurant-card .card .card-content .card__heart .heart_full {
+	opacity: 0;
+}
+
+.restaurant .restaurant-card .card .card-content .card__heart:hover .heart_full {
+	opacity: 1;
 }
 
 /***** Footer *****/
