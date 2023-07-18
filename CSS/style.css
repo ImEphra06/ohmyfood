@@ -381,6 +381,14 @@ footer .link .link1 .icon {
   .menu-title {
     justify-content: flex-start;
   }
+  #heart-icon {
+    position: relative;
+    height: 19px;
+    cursor: pointer;
+  }
+  #heart-icon:active .fa-heart-animated {
+    font-size: 20px;
+  }
   .menu-list {
     display: flex;
     flex-direction: column;
@@ -394,6 +402,9 @@ footer .link .link1 .icon {
     display: inline-block;
     width: 40px;
     background-color: #99E2D0;
+  }
+  .menu-card .card .card-content:active .card-check {
+    width: 60px;
   }
   /***** Footer *****/
   footer {

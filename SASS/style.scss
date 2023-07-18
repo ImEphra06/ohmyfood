@@ -368,6 +368,15 @@ footer {
     justify-content: flex-start;
   }
 
+  #heart-icon {
+    position: relative;
+    height: 19px;
+    cursor: pointer;
+    &:active .fa-heart-animated {
+      font-size: 20px;
+    }
+  }
+
   .menu-list {
     display: flex;
     flex-direction: column;
@@ -381,6 +390,16 @@ footer {
       display: inline-block;
       width: 40px;
       background-color: $underline;
+    }
+  }
+
+  .menu-card {
+    .card {
+      .card-content {
+        &:active .card-check {
+          width: 60px;
+        }
+      }
     }
   }
 
