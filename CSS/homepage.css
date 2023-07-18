@@ -19,18 +19,6 @@
     }
 }
 
-/***** Animation du coeur ****
-.fa-heart-animated {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    font-size: 0px;
-    color: #9356DC;
-    transition-duration: 0.3s;
-}*/
-
-
 /***** Général *****/
 * {
     font-family: 'Roboto', sans-serif;
