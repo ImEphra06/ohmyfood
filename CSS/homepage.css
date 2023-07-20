@@ -228,17 +228,14 @@ header p {
 }
 
 /***** Restaurant *****/
-.restaurant-background {
-    background-color: #F6F6F6;
-    box-sizing: border-box;
-    width: 100%;
-}
-
 .restaurant {
     display: flex;
+    background-color: #F6F6F6;
+    box-sizing: border-box;
     flex-direction: column;
     margin-right: auto;
     margin-left: auto;
+    width: 100%;
     max-width: 1040px;
 }
 
